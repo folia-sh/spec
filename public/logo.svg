@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="leafGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ADE80"/>
+      <stop offset="100%" style="stop-color:#22C55E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Stacked layers - bottom to top, darker to lighter -->
+  <!-- Each layer curves like a leaf/mountain ridge -->
+
+  <!-- Layer 4 (bottom) - darkest slate -->
+  <path d="M20 85 Q60 65 100 85 L100 95 Q60 75 20 95 Z" fill="#1E293B"/>
+
+  <!-- Layer 3 - charcoal -->
+  <path d="M20 70 Q60 48 100 70 L100 80 Q60 58 20 80 Z" fill="#334155"/>
+
+  <!-- Layer 2 - slate -->
+  <path d="M20 55 Q60 31 100 55 L100 65 Q60 41 20 65 Z" fill="#475569"/>
+
+  <!-- Layer 1 (top) - green foliage -->
+  <path d="M20 40 Q60 14 100 40 L100 50 Q60 24 20 50 Z" fill="url(#leafGradient)"/>
+
+  <!-- Subtle stem/vein line connecting layers (like a leaf vein or data flow) -->
+  <path d="M60 20 L60 90" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2,3" opacity="0.5"/>
+</svg>
