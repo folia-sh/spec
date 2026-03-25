@@ -68,7 +68,7 @@ description: >
 | **[geo](/domains/geo)** | 47 | P1 | Geospatial - terrain, raster, vector, analysis, imagery, classification, hydrology, utility |
 | **[tabular](/domains/tabular)** | 6 | P1 | Tabular data - DuckDB-powered SQL transforms |
 | **[temporal](/domains/temporal)** | 6 | P2 | Time-series - resample, rolling, align, interpolate |
-| **ml** | 4 | P3 | Machine learning - foundation model inference, embedding, chip/reassemble |
+| **[ml](/domains/ml)** | 12 | P3 | Machine learning - data prep, inference, embeddings, distillation, evaluation |
 
 Future domains under consideration: `imagery` (P2), `sensor` (P3).
 

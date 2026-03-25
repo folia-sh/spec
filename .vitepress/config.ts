@@ -33,7 +33,7 @@ export default defineConfig({
         text: 'Links',
         items: [
           { text: 'Catalog (data.folia.sh)', link: 'https://data.folia.sh' },
-          { text: 'GitHub', link: 'https://github.com/nthh/folia' },
+          { text: 'GitHub', link: 'https://github.com/folia-sh/spec' },
         ],
       },
     ],
@@ -75,6 +75,7 @@ export default defineConfig({
             { text: 'Geo', link: '/domains/geo' },
             { text: 'Tabular', link: '/domains/tabular' },
             { text: 'Temporal', link: '/domains/temporal' },
+            { text: 'ML', link: '/domains/ml' },
           ],
         },
         {
@@ -94,6 +95,7 @@ export default defineConfig({
           items: [
             { text: 'Namespaces', link: '/catalog/namespaces' },
             { text: 'Publishing', link: '/catalog/publishing' },
+            { text: 'Model & Data Cards', link: '/catalog/cards' },
           ],
         },
         {
@@ -122,7 +124,7 @@ export default defineConfig({
     outline: { level: [2, 3] },
 
     editLink: {
-      pattern: 'https://github.com/nthh/folia/edit/main/spec/:path',
+      pattern: 'https://github.com/folia-sh/spec/edit/main/spec/:path',
       text: 'Edit this page',
     },
 
