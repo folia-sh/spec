@@ -1,3 +1,9 @@
+<!-- TODO: Primer is currently unlinked from sidebar/nav. Overview goes directly to /core/workspace.
+     Restore when primer content is polished:
+     - config.ts: add { text: 'Primer', link: '/primer' } under Introduction
+     - index.md: hero link back to /primer
+-->
+
 # Platform Primer
 
 ::: info Non-Normative

@@ -1,6 +1,6 @@
 # ML Domain
 
-For machine learning inference, data preparation, and model management. Folia is the **data preparation and inference layer** — not a training platform. The ML ecosystem has mature training tools (TorchGeo, InstaGeo, TerraTorch); folia fills the gap between trained models and deployed predictions with provenance.
+For machine learning inference, data preparation, and model management. Folia is the **data preparation and inference layer**  - not a training platform. The ML ecosystem has mature training tools (TorchGeo, InstaGeo, TerraTorch); folia fills the gap between trained models and deployed predictions with provenance.
 
 *Decided in [ADR-0006](/decisions/#adr-0006)*
 
@@ -59,7 +59,7 @@ layers:
 
 ### Prediction Layer
 
-Output of running inference — a computed layer like any other:
+Output of running inference  - a computed layer like any other:
 
 ```yaml
 layers:
@@ -83,7 +83,7 @@ layers:
 
 ### Embedding Layer
 
-Precomputed embeddings from a foundation model — an intermediate representation for lightweight downstream tasks:
+Precomputed embeddings from a foundation model  - an intermediate representation for lightweight downstream tasks:
 
 ```yaml
 layers:

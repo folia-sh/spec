@@ -2,7 +2,7 @@
 
 Structured metadata cards for published models and datasets. Cards make artifacts discoverable, reproducible, and interoperable with HuggingFace Hub and the broader geospatial ML community.
 
-Cards are not a separate system — they are a **view** of existing artifact metadata (provenance, `ml:` schema, `geo:` extent) formatted for human consumption and platform interop.
+Cards are not a separate system  - they are a **view** of existing artifact metadata (provenance, `ml:` schema, `geo:` extent) formatted for human consumption and platform interop.
 
 ## Why Cards
 
@@ -50,7 +50,7 @@ layers:
         fine-tuned from Prithvi-100M on HLS imagery.
       intended_use: Regional crop mapping from Harmonized Landsat Sentinel imagery
       limitations:
-        - Trained on European crops only — not validated for tropical agriculture
+        - Trained on European crops only  - not validated for tropical agriculture
         - Requires 6+ cloud-free observations per growing season
         - Accuracy degrades below 60% for fields smaller than 0.5 ha
       license: Apache-2.0
@@ -194,7 +194,7 @@ layers:
         Linear probing, nearest-neighbor search, and downstream
         classification without re-running the foundation model.
       limitations:
-        - Single-date composites (monthly median) — no intra-month variation
+        - Single-date composites (monthly median)  - no intra-month variation
         - Cloud-masked gaps in Pacific Northwest winter months
 
       source_data:
@@ -288,7 +288,7 @@ The full [geo-embeddings](https://geoembeddings.org) specification defines the c
 
 ## Relationship to Provenance
 
-Cards complement folia's provenance chain — they don't replace it. Provenance tracks the full computational lineage (source data -> operations -> output). Cards summarize the **human-relevant context** that provenance alone doesn't capture: intended use, known limitations, ethical considerations.
+Cards complement folia's provenance chain  - they don't replace it. Provenance tracks the full computational lineage (source data -> operations -> output). Cards summarize the **human-relevant context** that provenance alone doesn't capture: intended use, known limitations, ethical considerations.
 
 ```
 Provenance: source imagery -> cloud_filter -> chip -> train -> model

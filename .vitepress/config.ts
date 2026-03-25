@@ -43,8 +43,7 @@ export default defineConfig({
         {
           text: 'Introduction',
           items: [
-            { text: 'Overview', link: '/primer' },
-            { text: 'Quick Start', link: '/quickstart' },
+            { text: 'Overview', link: '/core/workspace' },
           ],
         },
         {

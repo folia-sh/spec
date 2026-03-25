@@ -7,7 +7,7 @@ hero:
   actions:
     - theme: brand
       text: Read the Spec
-      link: /primer
+      link: /core/workspace
     - theme: alt
       text: Browse Operations
       link: /operations/
@@ -105,4 +105,4 @@ Views define how layers are presented: layout, visible layers, and UI components
 
 folia is a declarative geospatial platform. A `folia.yaml` file defines data sources, computations, and visualizations. The platform handles execution, locally or in the cloud. This spec documents the complete YAML schema and platform behavior.
 
-Read the [Primer](/primer) to understand the core concepts, or jump straight into the [Core Spec](/core/workspace).
+Read the [Core Spec](/core/workspace) to understand the platform.
