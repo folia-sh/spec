@@ -55,7 +55,7 @@ compute:
 
 ### Operation
 
-An operation is an abstract interface: typed inputs, typed outputs, named parameters. The platform runs operations across three **compute tiers**: browser (instant, for small data), local (your machine, using GDAL and DuckDB), and cloud (K8s workers for large-scale batch). The platform picks the tier automatically based on data size and operation type. Google Earth Engine is available as an external compute platform when explicitly requested.
+An operation is an abstract interface: typed inputs, typed outputs, named parameters. The platform runs operations across three **compute tiers**: browser (instant, DuckDB-WASM and Pyodide for small data), local (your machine, using GDAL and DuckDB), and cloud (server-side for large-scale batch). The platform picks the tier automatically based on data size and operation type. Google Earth Engine is available as an external compute platform when explicitly requested.
 
 Operations carry **view hints** - default visualization suggestions like palette and legend type. These hints are overridden by layer-level style, which is overridden by view-level settings.
 

@@ -93,7 +93,7 @@ layers:
 
 ### Python Engine
 
-Python is Turing-complete, file-referenced, and runs server-side in a container. Python code **MUST** be stored as a file, never inline in YAML.
+Python is Turing-complete and file-referenced. For pure Python and numpy, it runs in-browser via Pyodide. For operations requiring native libraries (GDAL, rasterio), it runs server-side. Python code **MUST** be stored as a file, never inline in YAML.
 
 ```yaml
 layers:
@@ -160,7 +160,7 @@ layers:
 | `params` | object | No | Parameters for this step. |
 | `as` | string | No | Name for this step's output. Later steps can reference it via `{ ref: name }`. |
 
-`op:` and `engine:` **MAY** be mixed in the same chain. If any step uses `engine: python`, the entire chain runs server-side.
+`op:` and `engine:` **MAY** be mixed in the same chain. If any step requires native dependencies, the entire chain runs server-side.
 
 ---
 
@@ -219,9 +219,9 @@ The platform routes operations to one of three **compute tiers** based on data s
 
 | Tier | When | Tools Used |
 |------|------|------------|
-| **Browser** | `engine: sql` with data < 50 MB | DuckDB-WASM, client-side rendering |
+| **Browser** | `engine: sql` with data < 50 MB, pure Python via Pyodide | DuckDB-WASM, Pyodide, client-side rendering |
 | **Local** | `engine: sql` with data >= 50 MB, `op:` with local data | DuckDB native, GDAL, rasterio, Python |
-| **Cloud** | Large-scale batch, fan-out/reduce, continental-scale ops | K8s workers running the same libraries |
+| **Cloud** | Large-scale batch, fan-out/reduce, continental-scale ops | Same libraries, server-side compute |
 
 The user does not choose a tier. The platform picks based on data size and operation type.
 
@@ -242,8 +242,9 @@ For `engine:` mode, routing is based on engine type and data size:
 |---------|------|
 | `engine: sql`, data < 50 MB | **Browser** (DuckDB-WASM, client-side) |
 | `engine: sql`, data >= 50 MB | **Local** (DuckDB native, server-side) |
-| `engine: python` (any size) | **Local** or **Cloud** (Python container) |
-| Multi-step chain with any Python step | Entire chain runs **Local** or **Cloud** |
+| `engine: python`, pure Python/numpy, data < 50 MB | **Browser** (Pyodide) |
+| `engine: python`, needs native libs (GDAL, rasterio) | **Local** or **Cloud** |
+| Multi-step chain with any native-dependency step | Entire chain runs **Local** or **Cloud** |
 
 ### External Compute
 

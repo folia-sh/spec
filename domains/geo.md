@@ -61,14 +61,14 @@ The geo domain organizes 47 operations into 9 categories:
 
 ## Compute
 
-Geo operations run on GDAL, rasterio, and numpy in the local and cloud compute tiers. The platform routes automatically based on data size and location - local files run locally, cloud-hosted data runs on K8s workers.
+Geo operations run on GDAL, rasterio, and numpy. The platform routes automatically based on data size and location - local files run locally, remote data runs server-side.
 
 Google Earth Engine is available as an external compute option for cloud-scale processing via `backend: gee`.
 
 | Tier | Libraries | Use Case |
 |------|-----------|----------|
 | **Local** | GDAL, rasterio, numpy | Local files, small to medium rasters |
-| **Cloud** | GDAL, rasterio, numpy (on K8s workers) | Remote data, large-scale batch processing |
+| **Cloud** | GDAL, rasterio, numpy (server-side) | Remote data, large-scale batch processing |
 | **External (GEE)** | Google Earth Engine | Explicit `backend: gee`, planetary-scale analysis |
 
 *Decided in [ADR-0007](/decisions/#adr-0007) - engines, connectors, and drivers are three orthogonal concerns.*

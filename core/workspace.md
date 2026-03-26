@@ -203,7 +203,7 @@ The platform infers deployment requirements from the workspace contents:
 | Condition | Inferred Behavior |
 |-----------|-------------------|
 | All layers are static, no compute | Serve-only deployment |
-| Any layer has `compute:` with `engine: python` | Worker deployment required |
+| Any layer has `compute:` with `engine: python` | Python runtime required (browser via Pyodide for pure Python, server-side for heavy dependencies) |
 | Any layer has `refresh: stream` | Persistent connection required |
 | Any layer has `refresh: schedule(...)` | Scheduler deployment required |
 

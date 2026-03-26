@@ -10,7 +10,7 @@ The implementation behind an operation. The platform routes operations to comput
 
 ## Compute Tiers
 
-The three levels where folia runs computation: browser (DuckDB-WASM, instant, free), local (GDAL, DuckDB, Python - seconds, free), and cloud (K8s workers, batch - minutes, metered). The platform picks the tier based on data size and operation type. Users do not choose a tier explicitly.
+The three levels where folia runs computation: browser (DuckDB-WASM, Pyodide, instant, free), local (GDAL, DuckDB, Python - seconds, free), and cloud (server-side batch - minutes, metered). The platform picks the tier based on data size, operation type, and dependency requirements. Users do not choose a tier explicitly.
 
 ## Capabilities
 
@@ -46,7 +46,7 @@ A pluggable module that extends the platform with schema extensions and operatio
 
 ## Engine
 
-An inline compute mode (`engine: sql` or `engine: python`) for ad-hoc transforms that don't warrant a registered operation. SQL engines run DuckDB queries (in-browser for small data, server-side for large data); Python engines invoke a specified module and function. *Decided in [ADR-0005](/decisions/#adr-0005).*
+An inline compute mode (`engine: sql` or `engine: python`) for ad-hoc transforms that don't warrant a registered operation. SQL engines run DuckDB queries (in-browser for small data, server-side for large data); Python engines run via Pyodide in-browser for pure Python, or server-side when native libraries are needed. *Decided in [ADR-0005](/decisions/#adr-0005).*
 
 ## Form
 
